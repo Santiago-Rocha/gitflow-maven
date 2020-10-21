@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>gitflow-plugin</artifactId>
-	<version>1.2.2</version>
+	<version>1.2.3</version>
 	<name>gitflow-plugin</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -48,7 +48,10 @@
 				<artifactId>gitflow-maven-plugin</artifactId>
 				<version>1.14.0</version>
 				<configuration>
-					<!-- optional configuration -->
+					<commitMessages>
+						<releaseStartMessage>Update versions for release/@{version}</releaseStartMessage>
+        				<releaseFinishMessage>Update for next development version @{version}</releaseFinishMessage>
+					</commitMessages>
 				</configuration>
 			</plugin>
 		</plugins>
